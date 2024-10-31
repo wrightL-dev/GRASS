@@ -15,8 +15,6 @@
 
 4. **Setelah Berhasil Login, Mulai Farming**
 
-5. **Jika Memiliki Proxy Bisa Tambahkan Di File proxy.txt**
-
 ## Dukungan
 
 Jika Anda memiliki pertanyaan atau butuh bantuan lebih lanjut, silakan bergabung dengan saluran Telegram kami di [t.me/tahuri01](https://t.me/tahuri01).
