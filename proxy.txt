@@ -1,0 +1,1 @@
+http://username:password@proxyserver.com:8080
