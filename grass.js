@@ -165,7 +165,7 @@ async function connectWebSocket(userId, proxy, deviceId) {
             timestamp: Math.floor(Date.now() / 1000),
             device_type: "extension",
             version: "4.26.2",
-            extension_id: "ilehaonighjijnmpnagapkhpcdbhclfg"
+            extension_id: "lkbnfiajjmbhnfledhphioinpickokdi"
           }
         };
         console.log(`\x1b[35m[${userId}] Mengirim respons AUTH\x1b[0m`);
