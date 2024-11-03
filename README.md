@@ -9,7 +9,7 @@
 
 2. **Install Package**
    ```bash
-   npm install fs readline uuid ws user-agents axios
+   npm install fs readline uuid ws user-agents axios https-proxy-agent
 
 3. **Login Dahulu Untuk Mendapatkan userid**
 
