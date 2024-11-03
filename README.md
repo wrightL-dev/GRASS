@@ -13,7 +13,7 @@
 
 3. **Login Dahulu Untuk Mendapatkan userid**
 
-4. **Setelah Berhasil Login, Mulai Farming**
+4. **Setelah Berhasil Login, Bisa Pilih Tanpa Proxy Ataupun Pakai Proxy**
 
 ## Dukungan
 
