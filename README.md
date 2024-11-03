@@ -14,6 +14,8 @@
 3. **Login Dahulu Untuk Mendapatkan userid**
 
 4. **Setelah Berhasil Login, Bisa Pilih Tanpa Proxy Ataupun Pakai Proxy**
+   ```bash
+   Note: Jika Ingin Pakai Proxy Tambahkan List Proxy Di File proxy.txt
 
 ## Dukungan
 
