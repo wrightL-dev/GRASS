@@ -1,6 +1,6 @@
 # BOT GRASS SEASON 2 - LITE ( EXTENSION ANDROID )
 
-![Fitur Grass](GRASS.jpg)
+![Fitur Grass](GRASS.png)
 
 1. **Clone Repository**
    ```bash
