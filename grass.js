@@ -127,8 +127,15 @@ async function connectWebSocket(userId) {
     } else if (message.action === "PONG") ws.send(JSON.stringify({ id: message.id, origin_action: "PONG" }));
   });
 
-  ws.on("error", error => console.error(`\x1b[31m[${userId}] Terjadi kesalahan tanpa proxy: ${error.message}\x1b[0m`));
-  ws.on("close", () => { console.log(`\x1b[31m[${userId}] Koneksi ditutup tanpa proxy\x1b[0m`); setTimeout(() => connectWebSocket(userId), 5000); });
+  ws.on("error", error => { 
+    console.error(`\x1b[31m[${userId}] Terjadi kesalahan tanpa proxy: ${error.message}\x1b[0m`);
+    setTimeout(() => connectWebSocket(userId), 5000);
+});
+
+ws.on("close", () => { 
+    console.log(`\x1b[31m[${userId}] Koneksi ditutup tanpa proxy\x1b[0m`);
+    setTimeout(() => connectWebSocket(userId), 5000);
+});
 }
 
 async function connectWebSocketWithProxy(userId, proxy) {
@@ -163,9 +170,10 @@ async function connectWebSocketWithProxy(userId, proxy) {
     } else if (message.action === "PONG") ws.send(JSON.stringify({ id: message.id, origin_action: "PONG" }));
   });
 
-  ws.on("error", error => { console.error(`\x1b[31m[${userId}] Terjadi kesalahan dengan proxy ${proxy}: ${error.message}\x1b[0m`); reconnect(); });
-  ws.on("close", () => { console.log(`\x1b[31m[${userId}] Koneksi ditutup dengan proxy ${proxy}, mencoba ulang...\x1b[0m`); reconnect(); });
-  function reconnect() { setTimeout(() => { console.log(`\x1b[33m[${userId}] Mencoba menyambung kembali dengan proxy ${proxy}...\x1b[0m`); connectWebSocketWithProxy(userId, proxy); }, 5000); }
+  ws.on("error", error => { /*console.error(`\x1b[31m[${userId}] Terjadi kesalahan dengan proxy ${proxy}: ${error.message}\x1b[0m`);*/ reconnect(); });
+  ws.on("close", () => { /*console.log(`\x1b[31m[${userId}] Koneksi ditutup dengan proxy ${proxy}, mencoba ulang...\x1b[0m`);*/ reconnect(); });
+
+  function reconnect() { setTimeout(() => { /*console.log(`\x1b[33m[${userId}] Mencoba menyambung kembali dengan proxy ${proxy}...\x1b[0m`);*/ connectWebSocketWithProxy(userId, proxy); }, 5000); }
 
 }
 
