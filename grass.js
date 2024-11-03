@@ -4,7 +4,7 @@ const { v4: uuidv4 } = require("uuid");
 const WebSocket = require("ws");
 const UserAgent = require("user-agents");
 const axios = require("axios");
-const HttpsProxyAgent = require('https-proxy-agent');
+const { HttpsProxyAgent } = require("https-proxy-agent");
 
 const rl = readline.createInterface({
   input: process.stdin,
